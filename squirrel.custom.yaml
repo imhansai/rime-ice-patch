@@ -1,0 +1,135 @@
+patch:
+  style:
+    # 选择皮肤，亮色与暗色主题
+    color_scheme: mint_light_green
+    color_scheme_dark: mint_dark_green
+
+    # 预设选项。如果皮肤没写，则使用这些属性；如果皮肤写了，使用皮肤的。
+    
+    # 自 0.36(Squirrel 0.15) 起已弃用。覆写为横向，建议使用 candidate_list_layout
+    horizontal: false
+    # # stacked | linear | tabled 候选项排列方向(如果希望水平，设置linear)
+    # candidate_list_layout: stacked  # stacked | linear | tabled
+    
+    text_orientation: horizontal  # horizontal | vertical
+    # 内嵌预编辑
+    inline_preedit: true
+    inline_candidate: false
+    
+    # 展示分页
+    show_paging : false
+    
+    # 记住面板大小后,它朝向屏幕中心扩展,而不是远离屏幕中心。
+    remember_size: false
+
+    # 外边框 圆角半径
+    corner_radius: 10
+    # 色彩空间： srgb | display_p3
+    color_space: srgb
+    
+    # 选中框 圆角半径
+    hilited_corner_radius: 5
+    
+    # 窗口边界高度，大于圆角半径才生效
+    border_height: 0
+    # 窗口边界宽度，大于圆角半径才生效
+    border_width: 0
+    # 在堆叠(stacked)布局中,候选词之间的空间
+    line_spacing: 5
+    # 在非内嵌(inline_preedit)模式下，预编辑和候选词之间的空间
+    spacing: 10
+    # 预编辑和候选词的行长度(如果值>0则固定,否则为灵活/自动调整)。
+    line_length: 0
+
+    # 候选词格式
+    # candidate_format: '%c. %@'
+
+    # 全局字体及大小
+    font_face: ''
+    font_point: 16
+    # 序号字体及大小（建议使用「等宽字体」）
+    label_font_face: 'Lucida Grande'
+    label_font_point: 16
+    # 注字体及大小
+    comment_font_face: 'PingFang SC'
+    comment_font_point: 14
+
+  preset_color_schemes:
+    mint_light_blue:
+      name: "蓝水鸭／Mint Light Blue"
+      author: Mintimate <"Mintimate's Blog">
+      translucency: true                     # 磨砂： false | true
+      mutual_exclusive: false                 # 色不叠加： false | true
+      shadow_size: 0                          # 阴影大小
+      line_spacing: 5                         # 行间距
+      # base_offset: 0                          # 字基高(Action版本鼠须管会崩溃)
+      alpha: 1                                # 透明度，0~1
+      spacing: 10                             # 拼音与候选项之间的距离 （inline_preedit: false）
+      back_color: 0xefefef                    # 底色
+      hilited_candidate_back_color: 0xed9564  # 选中底色
+      label_color: 0xcac9c8                   # 序号颜色
+      hilited_candidate_label_color: 0xefefef # 选中序号颜色
+      candidate_text_color: 0x424242          # 文字颜色
+      hilited_candidate_text_color: 0xefefef  # 选中文字颜色
+      comment_text_color: 0xcac9c8            # 注颜色
+      hilited_comment_text_color: 0xefefef    # 选中注颜色
+      text_color: 0x6495ed                    # 拼音颜色 （inline_preedit: false）
+      hilited_text_color: 0xed9564            # 选中拼音颜色 （inline_preedit: false）
+      
+    mint_dark_blue:
+      name: 黑水鸭／Mint Dark Blue
+      author: Mintimate <"Mintimate's Blog">
+      translucency: true                     # 磨砂： false | true
+      mutual_exclusive: false                 # 色不叠加： false | true
+      shadow_size: 0                          # 阴影大小
+      line_spacing: 5                         # 行间距
+      # base_offset: 0                          # 字基高(Action版本鼠须管会崩溃)
+      alpha: 1                                # 透明度，0~1
+      spacing: 10                             # 拼音与候选项之间的距离 （inline_preedit: false）
+      back_color: 0x424242                    # 底色
+      hilited_candidate_back_color: 0xc6c01a  # 选中底色
+      label_color: 0xefefef                   # 序号颜色
+      hilited_candidate_label_color: 0xefefef # 选中序号颜色
+      candidate_text_color: 0xefefef          # 文字颜色
+      hilited_candidate_text_color: 0xefefef  # 选中文字颜色
+      comment_text_color: 0xefefef            # 注颜色
+      hilited_comment_text_color: 0xffffff    # 选中注颜色
+      text_color: 0x6495ed                    # 拼音颜色 （inline_preedit: false）
+      hilited_text_color: 0xc6c01a            # 选中拼音颜色 （inline_preedit: false）
+      
+    mint_light_green:
+      name: "碧皓青／Mint Light Green"
+      author: Mintimate <"Mintimate's Blog">
+      translucency: true                      # 磨砂： false | true
+      mutual_exclusive: false                 # 色不叠加： false | true
+      color_space: srgb
+      back_color: 0xEFEFEF                    # 底色
+      candidate_text_color: 0x323232          # 文字颜色
+      comment_text_color: 0x878787            # 注颜色
+      label_color: 0x323232                   # 序号颜色
+      hilited_candidate_back_color: 0x7BAE4F  # 选中底色
+      hilited_candidate_text_color: 0xFFFFFF  # 选中文字颜色
+      hilited_comment_text_color: 0xDFF0EE    # 选中注颜色
+      hilited_candidate_label_color: 0xEFEFEF # 选中序号颜色
+      text_color: 0x7BAE4F                    # 拼音颜色 （inline_preedit: false）
+      hilited_text_color: 0xed9564            # 选中拼音颜色 （inline_preedit: false）
+
+      
+    mint_dark_green:
+      name: "碧月青／Mint Dark Green"
+      author: Mintimate <"Mintimate's Blog">
+      translucency: true                      # 磨砂： false | true
+      mutual_exclusive: false                 # 色不叠加： false | true
+      color_space: srgb
+      back_color: 0x323232                    # 底色
+      candidate_text_color: 0xE8E8E8          # 文字颜色
+      comment_text_color: 0xBEBEBE            # 注颜色
+      label_color: 0xB0B0B0                   # 序号颜色
+      hilited_candidate_back_color: 0x83C81C  # 选中底色
+      hilited_candidate_text_color: 0xEFEFEF  # 选中文字颜色
+      hilited_comment_text_color: 0xF4FAF8    # 选中注颜色
+      hilited_candidate_label_color: 0xEFEFEF # 选中序号颜色
+      text_color: 0x83C81C                    # 拼音颜色 （inline_preedit: false）
+      hilited_text_color: 0xed9564            # 选中拼音颜色 （inline_preedit: false）
+  
+  show_notifications_when: never

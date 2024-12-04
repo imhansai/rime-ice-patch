@@ -1,0 +1,12 @@
+patch:
+  
+  schema_list/schema:
+    - double_pinyin
+
+  menu/page_size: 9
+
+  switcher/hotkeys: 
+    - Control+Shift+grave
+
+  ascii_composer/good_old_caps_lock: false
+  ascii_composer/switch_key/Shift_L: noop
