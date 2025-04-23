@@ -1,24 +1,24 @@
 patch:
   style:
     # 选择皮肤，亮色与暗色主题
-    color_scheme: mint_light_green
-    color_scheme_dark: mint_dark_green
+    color_scheme: macos_light
+    color_scheme_dark: macos_dark
 
     # 预设选项。如果皮肤没写，则使用这些属性；如果皮肤写了，使用皮肤的。
-    
+
     # 自 0.36(Squirrel 0.15) 起已弃用。覆写为横向，建议使用 candidate_list_layout
-    horizontal: false
+    # horizontal: false
     # # stacked | linear | tabled 候选项排列方向(如果希望水平，设置linear)
-    # candidate_list_layout: stacked  # stacked | linear | tabled
-    
-    text_orientation: horizontal  # horizontal | vertical
+    candidate_list_layout: linear # stacked | linear | tabled
+
+    text_orientation: horizontal # horizontal | vertical
     # 内嵌预编辑
     inline_preedit: true
     inline_candidate: false
-    
+
     # 展示分页
-    show_paging : false
-    
+    show_paging: false
+
     # 记住面板大小后,它朝向屏幕中心扩展,而不是远离屏幕中心。
     remember_size: false
 
@@ -26,10 +26,10 @@ patch:
     corner_radius: 10
     # 色彩空间： srgb | display_p3
     color_space: srgb
-    
+
     # 选中框 圆角半径
-    hilited_corner_radius: 5
-    
+    hilited_corner_radius: 0
+
     # 窗口边界高度，大于圆角半径才生效
     border_height: 0
     # 窗口边界宽度，大于圆角半径才生效
@@ -42,94 +42,256 @@ patch:
     line_length: 0
 
     # 候选词格式
-    # candidate_format: '%c. %@'
+    # candidate_format: "%c. %@"
 
     # 全局字体及大小
-    font_face: ''
+    font_face: "PingFang SC"
     font_point: 16
     # 序号字体及大小（建议使用「等宽字体」）
-    label_font_face: 'Lucida Grande'
+    label_font_face: "Lucida Grande"
     label_font_point: 16
     # 注字体及大小
-    comment_font_face: 'PingFang SC'
+    comment_font_face: "PingFang SC"
     comment_font_point: 14
 
   preset_color_schemes:
     mint_light_blue:
       name: "蓝水鸭／Mint Light Blue"
       author: Mintimate <"Mintimate's Blog">
-      translucency: true                     # 磨砂： false | true
-      mutual_exclusive: false                 # 色不叠加： false | true
-      shadow_size: 0                          # 阴影大小
-      line_spacing: 5                         # 行间距
+      translucency: true # 磨砂： false | true
+      mutual_exclusive: false # 色不叠加： false | true
+      shadow_size: 0 # 阴影大小
+      line_spacing: 5 # 行间距
       # base_offset: 0                          # 字基高(Action版本鼠须管会崩溃)
-      alpha: 1                                # 透明度，0~1
-      spacing: 10                             # 拼音与候选项之间的距离 （inline_preedit: false）
-      back_color: 0xefefef                    # 底色
-      hilited_candidate_back_color: 0xed9564  # 选中底色
-      label_color: 0xcac9c8                   # 序号颜色
+      alpha: 1 # 透明度，0~1
+      spacing: 10 # 拼音与候选项之间的距离 （inline_preedit: false）
+      back_color: 0xefefef # 底色
+      hilited_candidate_back_color: 0xed9564 # 选中底色
+      label_color: 0xcac9c8 # 序号颜色
       hilited_candidate_label_color: 0xefefef # 选中序号颜色
-      candidate_text_color: 0x424242          # 文字颜色
-      hilited_candidate_text_color: 0xefefef  # 选中文字颜色
-      comment_text_color: 0xcac9c8            # 注颜色
-      hilited_comment_text_color: 0xefefef    # 选中注颜色
-      text_color: 0x6495ed                    # 拼音颜色 （inline_preedit: false）
-      hilited_text_color: 0xed9564            # 选中拼音颜色 （inline_preedit: false）
-      
+      candidate_text_color: 0x424242 # 文字颜色
+      hilited_candidate_text_color: 0xefefef # 选中文字颜色
+      comment_text_color: 0xcac9c8 # 注颜色
+      hilited_comment_text_color: 0xefefef # 选中注颜色
+      text_color: 0x6495ed # 拼音颜色 （inline_preedit: false）
+      hilited_text_color: 0xed9564 # 选中拼音颜色 （inline_preedit: false）
+
     mint_dark_blue:
       name: 黑水鸭／Mint Dark Blue
       author: Mintimate <"Mintimate's Blog">
-      translucency: true                     # 磨砂： false | true
-      mutual_exclusive: false                 # 色不叠加： false | true
-      shadow_size: 0                          # 阴影大小
-      line_spacing: 5                         # 行间距
+      translucency: true # 磨砂： false | true
+      mutual_exclusive: false # 色不叠加： false | true
+      shadow_size: 0 # 阴影大小
+      line_spacing: 5 # 行间距
       # base_offset: 0                          # 字基高(Action版本鼠须管会崩溃)
-      alpha: 1                                # 透明度，0~1
-      spacing: 10                             # 拼音与候选项之间的距离 （inline_preedit: false）
-      back_color: 0x424242                    # 底色
-      hilited_candidate_back_color: 0xc6c01a  # 选中底色
-      label_color: 0xefefef                   # 序号颜色
+      alpha: 1 # 透明度，0~1
+      spacing: 10 # 拼音与候选项之间的距离 （inline_preedit: false）
+      back_color: 0x424242 # 底色
+      hilited_candidate_back_color: 0xc6c01a # 选中底色
+      label_color: 0xefefef # 序号颜色
       hilited_candidate_label_color: 0xefefef # 选中序号颜色
-      candidate_text_color: 0xefefef          # 文字颜色
-      hilited_candidate_text_color: 0xefefef  # 选中文字颜色
-      comment_text_color: 0xefefef            # 注颜色
-      hilited_comment_text_color: 0xffffff    # 选中注颜色
-      text_color: 0x6495ed                    # 拼音颜色 （inline_preedit: false）
-      hilited_text_color: 0xc6c01a            # 选中拼音颜色 （inline_preedit: false）
-      
+      candidate_text_color: 0xefefef # 文字颜色
+      hilited_candidate_text_color: 0xefefef # 选中文字颜色
+      comment_text_color: 0xefefef # 注颜色
+      hilited_comment_text_color: 0xffffff # 选中注颜色
+      text_color: 0x6495ed # 拼音颜色 （inline_preedit: false）
+      hilited_text_color: 0xc6c01a # 选中拼音颜色 （inline_preedit: false）
+
     mint_light_green:
       name: "碧皓青／Mint Light Green"
       author: Mintimate <"Mintimate's Blog">
-      translucency: true                      # 磨砂： false | true
-      mutual_exclusive: false                 # 色不叠加： false | true
+      translucency: true # 磨砂： false | true
+      mutual_exclusive: false # 色不叠加： false | true
       color_space: srgb
-      back_color: 0xEFEFEF                    # 底色
-      candidate_text_color: 0x323232          # 文字颜色
-      comment_text_color: 0x878787            # 注颜色
-      label_color: 0x323232                   # 序号颜色
-      hilited_candidate_back_color: 0x7BAE4F  # 选中底色
-      hilited_candidate_text_color: 0xFFFFFF  # 选中文字颜色
-      hilited_comment_text_color: 0xDFF0EE    # 选中注颜色
+      back_color: 0xEFEFEF # 底色
+      candidate_text_color: 0x323232 # 文字颜色
+      comment_text_color: 0x878787 # 注颜色
+      label_color: 0x323232 # 序号颜色
+      hilited_candidate_back_color: 0x7BAE4F # 选中底色
+      hilited_candidate_text_color: 0xFFFFFF # 选中文字颜色
+      hilited_comment_text_color: 0xDFF0EE # 选中注颜色
       hilited_candidate_label_color: 0xEFEFEF # 选中序号颜色
-      text_color: 0x7BAE4F                    # 拼音颜色 （inline_preedit: false）
-      hilited_text_color: 0xed9564            # 选中拼音颜色 （inline_preedit: false）
+      text_color: 0x7BAE4F # 拼音颜色 （inline_preedit: false）
+      hilited_text_color: 0xed9564 # 选中拼音颜色 （inline_preedit: false）
 
-      
     mint_dark_green:
       name: "碧月青／Mint Dark Green"
       author: Mintimate <"Mintimate's Blog">
-      translucency: true                      # 磨砂： false | true
-      mutual_exclusive: false                 # 色不叠加： false | true
+      translucency: true # 磨砂： false | true
+      mutual_exclusive: false # 色不叠加： false | true
       color_space: srgb
-      back_color: 0x323232                    # 底色
-      candidate_text_color: 0xE8E8E8          # 文字颜色
-      comment_text_color: 0xBEBEBE            # 注颜色
-      label_color: 0xB0B0B0                   # 序号颜色
-      hilited_candidate_back_color: 0x83C81C  # 选中底色
-      hilited_candidate_text_color: 0xEFEFEF  # 选中文字颜色
-      hilited_comment_text_color: 0xF4FAF8    # 选中注颜色
+      back_color: 0x323232 # 底色
+      candidate_text_color: 0xE8E8E8 # 文字颜色
+      comment_text_color: 0xBEBEBE # 注颜色
+      label_color: 0xB0B0B0 # 序号颜色
+      hilited_candidate_back_color: 0x83C81C # 选中底色
+      hilited_candidate_text_color: 0xEFEFEF # 选中文字颜色
+      hilited_comment_text_color: 0xF4FAF8 # 选中注颜色
       hilited_candidate_label_color: 0xEFEFEF # 选中序号颜色
-      text_color: 0x83C81C                    # 拼音颜色 （inline_preedit: false）
-      hilited_text_color: 0xed9564            # 选中拼音颜色 （inline_preedit: false）
+      text_color: 0x83C81C # 拼音颜色 （inline_preedit: false）
+      hilited_text_color: 0xed9564 # 选中拼音颜色 （inline_preedit: false）
+
+    # https://x.com/lewangx/status/1643261030355566593
+    macos_light:
+      name: "MacOS 浅色／MacOS Light"
+      author: 小码哥
+      font_face: "PingFangSC"          # 字体及大小
+      font_point: 16
+      label_font_face: "PingFangSC"    # 序号字体及大小
+      label_font_point: 12
+      comment_font_face: "PingFangSC"  # 注字体及大小
+      comment_font_point: 16
+      candidate_format: "%c\u2005%@\u2005" # 编号 %c 和候选词 %@ 前后的空间
+      candidate_list_layout: linear   # 候选排布：层叠 stacked | 行 linear
+      text_orientation: horizontal    # 行文向： 横 horizontal | 纵 vertical
+      inline_preedit: true            # 拼音位于： 候选框 false | 行内 true
+      translucency: false             # 磨砂： false | true
+      mutual_exclusive: false         # 色不叠加： false | true
+      border_height: 1                # 外边框 高
+      border_width: 1                 # 外边框 宽
+      corner_radius: 5                # 外边框 圆角半径
+      hilited_corner_radius: 5       # 选中框 圆角半径
+      surrounding_extra_expansion: 0 # 候选项背景相对大小？
+      shadow_size: 0                 # 阴影大小
+      line_spacing: 5                # 行间距
+      base_offset: 0                 # 字基高
+      alpha: 1                       # 透明度，0~1
+      spacing: 10                    # 拼音与候选项之间的距离 （inline_preedit: false）
+      color_space: srgb                       # 色彩空间： srgb | display_p3
+      back_color: 0xFFFFFF                    # 底色
+      hilited_candidate_back_color: 0xD75A00  # 选中底色
+      label_color: 0x999999                   # 序号颜色
+      hilited_candidate_label_color: 0xFFFFFF # 选中序号颜色
+      candidate_text_color: 0x3c3c3c          # 文字颜色
+      hilited_candidate_text_color: 0xFFFFFF  # 选中文字颜色
+      comment_text_color: 0x999999            # 注颜色
+      hilited_comment_text_color: 0xFFFFFF    # 选中注颜色
+      text_color: 0x424242                    # 拼音颜色 （inline_preedit: false）
+      hilited_text_color: 0xFFFFFF            # 选中拼音颜色 （inline_preedit: false）
+      candidate_back_color: 0xFFFFFF          # 候选项底色
+      # preedit_back_color:                   # 拼音底色 （inline_preedit: false）
+      hilited_back_color: 0xD75A00            # 选中拼音底色 （inline_preedit: false）
+      border_color: 0xFFFFFF                  # 外边框颜色
   
-  show_notifications_when: never
+    macos_dark:
+      name: "MacOS 深色／MacOS Dark"
+      author: 小码哥
+      font_face: "PingFangSC"          # 字体及大小
+      font_point: 16
+      label_font_face: "PingFangSC"    # 序号字体及大小
+      label_font_point: 12
+      comment_font_face: "PingFangSC"  # 注字体及大小
+      comment_font_point: 16
+      candidate_format: "%c\u2005%@\u2005" # 编号 %c 和候选词 %@ 前后的空间
+      candidate_list_layout: linear   # 候选排布：层叠 stacked | 行 linear
+      text_orientation: horizontal    # 行文向： 横 horizontal | 纵 vertical
+      inline_preedit: true            # 拼音位于： 候选框 false | 行内 true
+      translucency: false             # 磨砂： false | true
+      mutual_exclusive: false         # 色不叠加： false | true
+      border_height: 1                # 外边框 高
+      border_width: 1                 # 外边框 宽
+      corner_radius: 5                # 外边框 圆角半径
+      hilited_corner_radius: 5       # 选中框 圆角半径
+      surrounding_extra_expansion: 0 # 候选项背景相对大小？
+      shadow_size: 0                 # 阴影大小
+      line_spacing: 5                # 行间距
+      base_offset: 0                 # 字基高
+      alpha: 1                       # 透明度，0~1
+      spacing: 10                    # 拼音与候选项之间的距离 （inline_preedit: false）
+      color_space: srgb                       # 色彩空间： srgb | display_p3
+      back_color: 0x1f1e2d                  # 底色
+      hilited_candidate_back_color: 0xD75A00  # 选中底色
+      label_color: 0x999999                   # 序号颜色
+      hilited_candidate_label_color: 0xFFFFFF # 选中序号颜色
+      candidate_text_color: 0xe9e9ea          # 文字颜色
+      hilited_candidate_text_color: 0xFFFFFF  # 选中文字颜色
+      comment_text_color: 0x999999            # 注颜色
+      hilited_comment_text_color: 0x999999    # 选中注颜色
+      text_color: 0x808080                    # 拼音颜色 （inline_preedit: false）
+      hilited_text_color: 0xFFFFFF            # 选中拼音颜色 （inline_preedit: false）
+      candidate_back_color: 0x1f1e2d          # 候选项底色
+      # preedit_back_color:                   # 拼音底色 （inline_preedit: false）
+      hilited_back_color: 0xD75A00            # 选中拼音底色 （inline_preedit: false）
+      border_color: 0x050505                  # 外边框颜色
+  
+    wechat_light:
+      name: "微信浅色／Wechat Light"
+      author: 小码哥
+      font_face: "PingFangSC"          # 字体及大小
+      font_point: 16
+      label_font_face: "PingFangSC"    # 序号字体及大小
+      label_font_point: 13
+      comment_font_face: "PingFangSC"  # 注字体及大小
+      comment_font_point: 16
+      candidate_format: "%c\u2005%@\u2005" # 编号 %c 和候选词 %@ 前后的空间
+      candidate_list_layout: linear   # 候选排布：层叠 stacked | 行 linear
+      text_orientation: horizontal    # 行文向： 横 horizontal | 纵 vertical
+      inline_preedit: true            # 拼音位于： 候选框 false | 行内 true
+      translucency: false             # 磨砂： false | true
+      mutual_exclusive: false         # 色不叠加： false | true
+      border_height: 1                # 外边框 高
+      border_width: 1                 # 外边框 宽
+      corner_radius: 5                # 外边框 圆角半径
+      hilited_corner_radius: 5       # 选中框 圆角半径
+      surrounding_extra_expansion: 0 # 候选项背景相对大小？
+      shadow_size: 0                 # 阴影大小
+      line_spacing: 5                # 行间距
+      base_offset: 0                 # 字基高
+      alpha: 1                       # 透明度，0~1
+      spacing: 10                    # 拼音与候选项之间的距离 （inline_preedit: false）
+      color_space: srgb                       # 色彩空间： srgb | display_p3
+      back_color: 0xFFFFFF                    # 底色
+      hilited_candidate_back_color: 0x79af22  # 选中底色
+      label_color: 0x999999                   # 序号颜色
+      hilited_candidate_label_color: 0xFFFFFF # 选中序号颜色
+      candidate_text_color: 0x3c3c3c          # 文字颜色
+      hilited_candidate_text_color: 0xFFFFFF  # 选中文字颜色
+      comment_text_color: 0x999999            # 注颜色
+      hilited_comment_text_color: 0x999999    # 选中注颜色
+      text_color: 0x424242                    # 拼音颜色 （inline_preedit: false）
+      hilited_text_color: 0x999999            # 选中拼音颜色 （inline_preedit: false）
+      candidate_back_color: 0xFFFFFF          # 候选项底色
+      # preedit_back_color:                   # 拼音底色 （inline_preedit: false）
+      hilited_back_color: 0x79af22            # 选中拼音底色 （inline_preedit: false）
+      border_color: 0xFFFFFF                  # 外边框颜色
+  
+    wechat_dark:
+      name: "微信深色／Wechat Dark"
+      author: 小码哥
+      font_face: "PingFangSC"          # 字体及大小
+      font_point: 16
+      label_font_face: "PingFangSC"    # 序号字体及大小
+      label_font_point: 13
+      comment_font_face: "PingFangSC"  # 注字体及大小
+      comment_font_point: 16
+      candidate_format: "%c\u2005%@\u2005" # 编号 %c 和候选词 %@ 前后的空间
+      candidate_list_layout: linear   # 候选排布：层叠 stacked | 行 linear
+      text_orientation: horizontal    # 行文向： 横 horizontal | 纵 vertical
+      inline_preedit: true            # 拼音位于： 候选框 false | 行内 true
+      translucency: false             # 磨砂： false | true
+      mutual_exclusive: false         # 色不叠加： false | true
+      border_height: 1                # 外边框 高
+      border_width: 1                 # 外边框 宽
+      corner_radius: 5                # 外边框 圆角半径
+      hilited_corner_radius: 5       # 选中框 圆角半径
+      surrounding_extra_expansion: 0 # 候选项背景相对大小？
+      shadow_size: 0                 # 阴影大小
+      line_spacing: 5                # 行间距
+      base_offset: 0                 # 字基高
+      alpha: 1                       # 透明度，0~1
+      spacing: 10                    # 拼音与候选项之间的距离 （inline_preedit: false）
+      color_space: srgb                       # 色彩空间： srgb | display_p3
+      back_color: 0x151515                    # 底色
+      hilited_candidate_back_color: 0x79af22  # 选中底色
+      label_color: 0x999999                   # 序号颜色
+      hilited_candidate_label_color: 0xFFFFFF # 选中序号颜色
+      candidate_text_color: 0xbbbbbb          # 文字颜色
+      hilited_candidate_text_color: 0xFFFFFF  # 选中文字颜色
+      comment_text_color: 0x999999            # 注颜色
+      hilited_comment_text_color: 0xFFFFFF    # 选中注颜色
+      text_color: 0xbbbbbb                    # 拼音颜色 （inline_preedit: false）
+      hilited_text_color: 0x999999            # 选中拼音颜色 （inline_preedit: false）
+      candidate_back_color: 0x151515          # 候选项底色
+      # preedit_back_color:                   # 拼音底色 （inline_preedit: false）
+      hilited_back_color: 0x79af22            # 选中拼音底色 （inline_preedit: false）
+      border_color: 0x292929                  # 外边框颜色
